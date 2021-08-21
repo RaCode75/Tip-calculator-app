@@ -12,7 +12,7 @@ $White: hsl(0, 0%, 100%);
 
 
 
-$container_h: 350px;
+$container_h: 400px;
 $container_p: 20px;
 $out_h: $container_h - ($container_p *2);
 
@@ -41,7 +41,7 @@ main{
 }
 
 #logo{
-        margin-top: 14rem;
+        margin-top: 12rem;
         margin-bottom: 5rem;    
 }
 
@@ -56,7 +56,7 @@ main{
     flex-wrap: wrap;
     background-color: $White;
     width: 55%;
-    //height: $container_h;
+    height: $container_h;
     margin: auto;//$container_m auto;
     border-radius: 1.5rem;
     padding: $container_p 0;

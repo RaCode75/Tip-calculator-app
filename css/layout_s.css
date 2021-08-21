@@ -33,7 +33,7 @@ main {
 }
 
 #logo {
-  margin-top: 14rem;
+  margin-top: 12rem;
   margin-bottom: 5rem;
 }
 
@@ -51,6 +51,7 @@ main {
       flex-wrap: wrap;
   background-color: white;
   width: 55%;
+  height: 400px;
   margin: auto;
   border-radius: 1.5rem;
   padding: 20px 0;
