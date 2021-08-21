@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  text-align: center;
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Space Mono';
+  font-size: 12px;
+  font-weight: 400;
+  color: #00494d;
+}
+
+#logo {
+  margin-top: 9rem;
+  margin-bottom: 4rem;
+}
+
+#bill_in, #custom, #people_in {
+  cursor: pointer;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: white;
+  width: 55%;
+  margin: auto;
+  border-radius: 1.5rem;
+  padding: 20px 0;
+}
+
+#container #inputs {
+  max-width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem 0;
+  margin-left: 1rem;
+}
+
+#container #inputs .rotulo {
+  min-width: 100%;
+  text-align: left;
+}
+
+#container #inputs #b_error {
+  min-width: 50%;
+  margin-left: 60%;
+}
+
+#container #inputs #p_error {
+  min-width: 50%;
+  margin-left: 30%;
+}
+
+#container #inputs input {
+  width: 100%;
+  height: 2.3rem;
+  background-color: #f4fafa;
+  color: #00494d;
+  border: none;
+  font-family: 'Space Mono';
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 0.3rem;
+}
+
+#container #inputs #bill_in {
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 10px;
+}
+
+#container #inputs #bill_in:hover, #container #inputs #bill_in:active, #container #inputs #bill_in:focus {
+  border: solid 2px #26c0ab;
+  outline: none;
+}
+
+#container #inputs #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 2.5rem 0;
+}
+
+#container #inputs #buttons button:hover {
+  background-color: #95eadf;
+  color: #00494d;
+}
+
+#container #inputs #buttons button:focus {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+#container #inputs #buttons .bill_b {
+  width: 30%;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  background-color: #00494d;
+  color: white;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#container #inputs #buttons #custom {
+  background-color: #f4fafa;
+  border: none;
+  color: #00494d;
+  font-size: 1rem;
+}
+
+#container #inputs #buttons #custom::-webkit-input-placeholder {
+  text-align: center;
+}
+
+#container #inputs #buttons #custom:-ms-input-placeholder {
+  text-align: center;
+}
+
+#container #inputs #buttons #custom::-ms-input-placeholder {
+  text-align: center;
+}
+
+#container #inputs #buttons #custom::placeholder {
+  text-align: center;
+}
+
+#container #inputs #buttons #custom:hover, #container #inputs #buttons #custom:focus, #container #inputs #buttons #custom:active {
+  border: solid 2px #26c0ab;
+  outline: none;
+}
+
+#container #inputs #people_in {
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 10px;
+}
+
+#container #inputs #people_in:hover, #container #inputs #people_in:active, #container #inputs #people_in:focus {
+  border: solid 2px #26c0ab;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+#container #outputs {
+  min-width: 45%;
+  background-color: #00494d;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1.5rem;
+}
+
+#container #outputs .out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container #outputs #out_statics {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#container #outputs #out_dinamics {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+#container #outputs .titulo {
+  color: #c5e4e7;
+}
+
+#container #outputs .sub {
+  color: #5e7a7d;
+  padding-bottom: 2.5rem;
+}
+
+#container #outputs .out_info {
+  font-size: 30px;
+  padding-bottom: 2.5rem;
+}
+
+#container #outputs #reset {
+  width: 90%;
+  height: 2.5rem;
+  margin-top: 4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  background-color: #26c0ab;
+}
+
+#container #outputs #reset:hover {
+  background-color: #95eadf;
+  color: #00494d;
+}
+
+#container #outputs #reset:focus {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+#container #outputs #reset:disabled {
+  width: 90%;
+  background-color: #7f9c9f;
+  opacity: 0.4;
+}
+
+@media screen and (min-width: 600px) {
+  #container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #container {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  #container {
+    width: 100%;
+    justify-items: auto;
+  }
+  #container #inputs {
+    margin: 0 0 1rem 0;
+    max-width: 75%;
+  }
+  #container #inputs #buttons .bill_b {
+    width: 45%;
+  }
+  #container #outputs {
+    margin: 0;
+    width: 80%;
+  }
+  #container #outputs #reset {
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=layout_s.css.map */
