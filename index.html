@@ -11,11 +11,17 @@
     <title>Prueba layout</title>
 </head>
 <body>
-    <img src='images/logo.svg' alt="logo" id='logo'/>
+  <main>
+    <h1>
+      <a title="h1 covert" href="" id="ghost">
+      <img src='images/logo.svg' alt="title_1" id='logo'/>
+      </a>
+    </h1>
     <div id="container">
         <div id="inputs">
-        <span class='rotulo' id='bill'>Bill<span id='b_error'></span></span>
+        <label for="bill" class='rotulo' id='bill'>Bill<span id='b_error'></span> <!--//<span class='rotulo' id='bill'>Bill<span id='b_error'></span></span>-->
         <input type='text' id="bill_in" placeholder="0" >
+        </label>
         <div id="buttons">
             <span class='rotulo' id='sel_tip'>Select Tip %</span>
             <button class="bill_b" id="5">5%</button>
@@ -23,11 +29,13 @@
             <button class="bill_b"id="15">15%</button>
             <button class="bill_b"id="25">25%</button>
             <button class="bill_b"id="50">50%</button>
-            <input type='text' placeholder=' Custom' class='bill_b' id="custom" />        
+            <label for="custom" id="cus_label" hidden> custom</label>
+            <input type='text' placeholder=' Custom' class='bill_b' id="custom" />
           </div>
-          <span class='rotulo' id='people'>Number of People<span id='p_error'></span></span>
+          <label for="people_in" class='rotulo' id='people'>Number of People<span id='p_error'></span> <!--<span class='rotulo' id='people'>Number of People<span id='p_error'></span></span>-->
           <input type="text" id='people_in' placeholder="0" />
-        </div>
+          </label>
+         </div>
         
         <div id="outputs">
 
@@ -52,5 +60,6 @@
         Coded by <a href="#">RaCode75</a>.
       </div>
       <script src='./logic.js'></script>
+    </main>
 </body>
 </html>

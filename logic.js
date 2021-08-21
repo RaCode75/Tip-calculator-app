@@ -23,7 +23,7 @@ let percent= 0;
 let many = 0;
 
 //--------------Listeners-----------------------
-bill_in.addEventListener('focus', (e) => {bill_in.value = ''});
+bill_in.addEventListener('focus', (e) => {bill_in.value = ''; bill = 0;});
 bill_in.addEventListener('keyup', function(){
     if(bill_in.value !== ''){
        let bill_valor = parseFloat(bill_in.value).toFixed(2);
@@ -47,7 +47,7 @@ bill_in.addEventListener('keyup', function(){
  prueba();
 
 });
-people_in.addEventListener('focus', (e) => {people_in.value = ''});
+people_in.addEventListener('focus', (e) => {people_in.value = ''; many= 0;});
 people_in.addEventListener('keyup', function(){
     if(people_in.value !== ''){
         let num_people = parseInt(people_in.value);
@@ -73,12 +73,12 @@ people_in.addEventListener('keyup', function(){
     //---------------buttons listeners-----------------------
 for(let b_perc of b_percent){    
     if(b_perc.id !== "custom"  ){
-        b_perc.addEventListener('click', function(){  
+        b_perc.addEventListener('click', function(){
                 percent = parseFloat(b_perc.id)/100;
                 prueba();        
             });
         }else{
-        b_perc.addEventListener('focus', (e) => {b_perc.value = ''});
+        b_perc.addEventListener('focus', (e) => {b_perc.value = ''; percent = 0 ;});
         b_perc.addEventListener('keyup', function(){
             if(custom.value !== 'Custom' && custom.value!== ''){
             percent = parseFloat(custom.value)/100;
@@ -109,7 +109,13 @@ reset.addEventListener('click', function() {
 function prueba(){
     if(bill && many && percent)
     {
+        if(bill !== 0 && many !== 0 && percent !== 0)
+        {
         tip.innerHTML = sign + parseFloat((bill*percent)/many).toFixed(2);
         total.innerHTML= sign + parseFloat((bill + (bill*percent)) / many).toFixed(2);
+        } 
+    }else {
+        total.innerHTML= sign + '0.00';
+        tip.innerHTML= sign + '0.00';
     }
 }

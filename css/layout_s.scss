@@ -36,9 +36,13 @@ body {
 
 }
 
+main{
+    width: 100%;
+}
+
 #logo{
-    margin-top: 9rem;
-    margin-bottom: 4rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
 }
 
 #bill_in, #custom, #people_in {
@@ -101,7 +105,7 @@ body {
          }
 
          #bill_in:hover,  #bill_in:active,  #bill_in:focus  {
-             border: solid 2px $Strong_cyan;
+             box-shadow: 0 0 0 2px $Strong_cyan;
              outline: none;
          }
 
@@ -132,6 +136,7 @@ body {
                 font-size: 1rem;
                 font-weight: 700;            
             }
+
             #custom{
                 background-color: $Light_gray;
                 border: none;
@@ -270,6 +275,9 @@ body {
     #outputs{
         margin:0;
         width: 80%;
+        .out{
+            min-width: 30%;
+        }
 
         #reset{
             margin-top: 2rem;
