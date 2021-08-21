@@ -1,0 +1,280 @@
+
+
+$Strong_cyan: hsl(172, 67%, 45%);
+$smooth_cyan: hsl(172, 67%, 75%);
+$dark_cyan: hsl(183, 100%, 15%);
+$gray_cyan: hsl(186, 14%, 43%);
+$grayish_cyan: hsl(184, 14%, 56%);
+$Light_grayish: hsl(185, 41%, 84%);
+$Light_gray: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+
+
+
+$container_h: 350px;
+$container_p: 20px;
+$out_h: $container_h - ($container_p *2);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    text-align: center;
+    background-color: $Light_grayish;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono';
+    font-size: 12px;
+    font-weight: 400;
+    color:$dark_cyan;
+
+}
+
+#logo{
+    margin-top: 9rem;
+    margin-bottom: 4rem;
+}
+
+#bill_in, #custom, #people_in {
+    cursor: pointer;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: $White;
+    width: 55%;
+    //height: $container_h;
+    margin: auto;//$container_m auto;
+    border-radius: 1.5rem;
+    padding: $container_p 0;
+   
+    #inputs{
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0.5rem 0;
+        margin-left: 1rem;
+        
+        .rotulo {
+            min-width: 100%;
+            text-align: left;
+        }
+
+        #b_error {
+            min-width: 50%;
+            margin-left: 60%;            
+        }
+
+        #p_error{
+            min-width: 50%;
+            margin-left: 30%;
+        }
+
+        input{
+             width: 100%;
+             height: 2.3rem;
+             background-color: $Light_gray;
+             color: $dark_cyan;
+             border: none;
+             font-family: 'Space Mono';
+             font-size: 24px;
+             font-weight: 700;
+             text-align: right;
+             padding-right: 10px;
+             border-radius: 0.3rem;
+         }
+
+         #bill_in{
+             background-image: url('../images/icon-dollar.svg');
+             background-repeat: no-repeat;
+             background-position: left;
+             background-position-x: 10px;
+         }
+
+         #bill_in:hover,  #bill_in:active,  #bill_in:focus  {
+             border: solid 2px $Strong_cyan;
+             outline: none;
+         }
+
+         #buttons{
+             display:flex;
+             flex-wrap: wrap;
+             justify-content: space-between;
+             width: 100%;
+             margin:2.5rem 0;
+
+             button:hover {
+                background-color: $smooth_cyan;
+                color: $dark_cyan;
+            }
+            button:focus{
+                background-color: $Strong_cyan;
+                color: $dark_cyan;
+            }
+
+            .bill_b{
+                width:30%;
+                height:2.5rem;
+                margin: 0.5rem 0;
+                border: none;
+                background-color: $dark_cyan;
+                color: $White;
+                border-radius: 0.4rem;
+                font-size: 1rem;
+                font-weight: 700;            
+            }
+            #custom{
+                background-color: $Light_gray;
+                border: none;
+                color: $dark_cyan;
+                font-size: 1rem;
+            }
+            #custom::placeholder{text-align:center;}
+
+            #custom:hover,#custom:focus, #custom:active {
+                border: solid 2px $Strong_cyan;
+                outline:none;
+            }
+
+         }
+
+         #people_in{
+            background-image: url('../images/icon-person.svg');
+            background-repeat: no-repeat;
+            background-position: left;
+            background-position-x: 10px;
+        }
+
+        #people_in:hover , #people_in:active, #people_in:focus {
+            border: solid 2px $Strong_cyan;
+            border-radius: 0.3rem;
+            outline: none;
+        }
+
+    }
+
+
+    #outputs{
+        min-width: 45%;
+        background-color: $dark_cyan;
+        border-radius: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 1.5rem;
+        //margin-right: 1rem;
+
+
+        .out{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            min-width: 50%;
+            justify-content: center;
+
+        }
+        #out_statics{
+            align-items: flex-start;
+
+        }
+        #out_dinamics{
+            align-items: flex-end;
+            color: $Strong_cyan;
+            font-weight: 700;
+        }
+
+
+        .titulo {
+            color: $Light_grayish;
+        }
+        .sub{
+            color: $gray_cyan;
+            padding-bottom: 2.5rem;
+        }
+        .out_info{
+            font-size: 30px;
+            padding-bottom: 2.5rem;
+        }
+
+        #reset {
+            width: 90%;
+            height: 2.5rem;
+            margin-top: 4rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 0.3rem;
+            text-transform: uppercase;
+            background-color: $Strong_cyan;
+
+        }
+        #reset:hover {
+            background-color: $smooth_cyan;
+            color: $dark_cyan;
+        }
+        #reset:focus{
+            background-color: $Strong_cyan;
+            color: $dark_cyan;
+        }
+
+        #reset:disabled{
+            width: 90%;
+            background-color: $grayish_cyan;
+            opacity: 0.4;
+        }
+    }
+
+
+    }
+
+@media screen and (min-width:600px){
+    #container{
+        width:80%;
+    }
+}
+
+@media screen and (min-width:1100px){
+    #container{
+        width:55%;
+    }
+}
+
+@media screen and (max-width:600px){
+    #logo{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    #container{
+        width:100%;
+        justify-items: auto;
+
+    
+    #inputs{
+        margin:0 0 1rem 0;
+        max-width: 75%;
+        #buttons{
+            .bill_b{
+                width:45%;
+            }
+        }
+    }
+    #outputs{
+        margin:0;
+        width: 80%;
+
+        #reset{
+            margin-top: 2rem;
+        }
+    }
+
+  }
+}
