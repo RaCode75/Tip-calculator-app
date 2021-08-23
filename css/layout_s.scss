@@ -56,7 +56,7 @@ main{
     flex-wrap: wrap;
     background-color: $White;
     width: 55%;
-    height: $container_h;
+    //height: $container_h;
     margin: auto;//$container_m auto;
     border-radius: 1.5rem;
     padding: $container_p 0;
@@ -196,6 +196,7 @@ main{
             align-items: flex-end;
             color: $Strong_cyan;
             font-weight: 700;
+            font-size: 2rem;
         }
 
 
@@ -260,8 +261,10 @@ main{
         margin-bottom: 2rem;
     }
     #container{
+        flex-direction: column;
         width:100%;
-        justify-items: auto;
+        align-items:center;
+
 
     
     #inputs{
